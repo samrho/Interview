@@ -2,17 +2,26 @@
 
 개발자 면접을 대비하여 공부한 내용을 정리하는 저장소입니다.
 
+## HTML
+
+-   [x] HTML vs XML ?
+-   [x] XML vs JSON ?
+
+## CSS
+
+-   [] CSS이벤트 제어 방법(event delegation, event bubbling 등)
+
 ## Javascript
 
--   [ ] Object.create의 역할은 무엇인가요?
--   [ ] 자바스크립트에서 모듈내의 private한 속성을 만드는 방법을 아는대로 쓰세요.
--   [ ] JS에서 재귀호출로 인한 stack overflow를 막을 수 있는방법은?
+-   [x] Object.create의 역할은 무엇인가요?
+-   [x] 자바스크립트에서 모듈내의 private한 속성을 만드는 방법을 아는대로 쓰세요.
+-   [x] JS에서 재귀호출로 인한 stack overflow를 막을 수 있는방법은?
 -   [ ] closure 와 스코프관계를 설명해보세요.
--   [ ] = 보다, === 를 써야할때는?
+-   [x] == 보다, === 를 써야할때는?
 -   [ ] ES6의 Class extends 내부 동작원리에 대해서 설명해보세요.
--   [ ] 객체를 탐색하는 방법에 대해서 2가지를 작성해보세요.
+-   [x] 객체를 탐색하는 방법에 대해서 2가지를 작성해보세요.
 -   [ ] NodeList 타입을, Array에 있는 reduce메서드를 사용하는 방법은?
--   [ ] arrow 함수의 this가 결정되는 방식을 설명해보세요.
+-   [x] arrow 함수의 this가 결정되는 방식을 설명해보세요.
 -   [ ] undefined와 null의 차이점을 설명하세요.
 -   [ ] 아래처럼 동작하는 flatten함수를 reduce를 활용해서 만들어보세요.
 
@@ -26,10 +35,11 @@
     console.log(flattenedArray); //[1, 2, 3, 4, 5, 6];
     ```
 
--   [ ] 객체를 복사해서 새로운 객체를 만들고 싶습니다. 코드를 구현해보세요. (객체의 깊이는 1단계만 있다고 가정)
+-   [x] 객체를 복사해서 새로운 객체를 만들고 싶습니다. 코드를 구현해보세요. (객체의 깊이는 1단계만 있다고 가정)
 -   [ ] Array.from 이 모든 브라우저에서 동작하도록 polyfill코드를 만들어보세요.
 -   [ ] prototype 의 동작방식에 대해서 설명해보세요.
 -   [ ] 순환되는 캐로셀UI의 구현 원리에 대해서 설명해보세요.
+-   [ ] 이벤트루프랑 이벤트큐 콜스택 질문
 -   [ ] Event 객체에 대해서 설명해보세요.
 -   [ ] Array.from 이 모든 브라우저에서 동작하도록 polyfill코드를 만들어보세요.
 -   [ ] arrow 함수의 this가 결정되는 방식을 설명해보세요.
@@ -37,6 +47,7 @@
 -   [ ] bind 가 필요한 상황을 간단한 코드로 보여주세요.
 -   [ ] CommonJS 스펙에 대해 설명해보세요.
 -   [ ] 클로저로 동작되는 상황을 예시코드로 보여주세요.
+-   [ ] 클로져가 뭔가 클로져를 여러 곳에서 사용하면 어떤 문제가 있나
 -   [ ] 자바스크립트의 원시 타입(Primitive Data Type)은 몇가지이며, 전부 말해달라
 -   [ ] Number, String, Boolean, Null, Undefined, (Symbol)
         자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가
@@ -54,6 +65,8 @@
 -   [ ] ES6 에서 추가된 스펙에 대해 아는대로 다 말해달라(let, const, rest parameter, class, arrow function...)
 -   [ ] var 와 let, const의 가장 큰 차이점은 무엇인가 (function scope와 block scope의 개념에서)
 -   [ ] Class 는 무엇이고, Prototype, fucntion의 ES5 스펙만으로 Class를 구현할수 있는가
+-   [ ] es6 let const var 호이스팅 관점 설명
+-   [ ] 제너레이터 펑션이 뭔가
 
 ## TypeScript
 
@@ -66,6 +79,7 @@
 -   [ ] React의 렌더링 방식은 무엇인가요?
 -   [ ] React의 초기화면 느린 부분은 어떻게 해결해야해요?
 -   [ ] SSR은 무엇인가요? 어떻게 구현하죠?
+-   [ ] hooks 장점 훅 어떤어떤 거 썼나
 
 ## Node
 
@@ -116,12 +130,14 @@
 -   [ ] Promise와 Callback의 차이점은 무엇이며 각각의 장단점에 대해 설명해달라
 -   [ ] Async, Await가 무엇이며, 사용해본 경험이 있는가
 -   [ ] 비동기를 처리할 수 있는 4가지 방법에 대해 이야기해 보고 장단점, 특징을 논하라(callback, promise, async/await, generator function)
+-   [ ] 이미지 레이지로딩 어케 했나
 
 ## Attitude
 
 -   [ ] 프로그래밍 요구사항을 받았을때, 구현하기 전까지 어떤 과정을 거치시나요?
 -   [ ] 최근 가장 깊게 공부하고 있는 부분은 무엇인가요? 그 부분에 대해서 간단하게 설명해보세요.
 -   [ ] 본인이 즐겨하는 디버깅 방법을 설명해보세요.
+
 -   [ ] 왜 개발자가 되려고 하는가
 -   [ ] 개발자로서의 본인의 비전을 이야기 해달라
 -   [ ] 운영체제같은 컴퓨터공학(cs)에 대한 기초지식이 있는가
@@ -133,10 +149,12 @@
 -   [ ] 즐겨 보는 개발 관련 유튜브가 있는가
 -   [ ] 회사 기술 스택에 맞추어 단기간 내에 언어와 프레임워크를 학습 하여야 할 때, 어떻게 공부하고 해결할 것인가
 -   [ ] 포트폴리오 제작시에 비인기 라이브러리를 사용한 경험이 있는가, 이러한 비인기 라이브러리에 대한 정보를 어디서 얻는가 왜 활용하였는가
+-   [ ] 어려운 거 없었나
+-   [ ] 질문은 없나
 
 ## references
 
-https://velog.io/@honeysuckle/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8-%EB%AA%A8%EC%9D%8C  
+h tps://velog.io/@honeysuckle/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8-%EB%AA%A8%EC%9D%8C  
 https://github.com/JaeYeopHan/Interview_Question_for_Beginner  
 https://lucas.codesquad.kr/  
 https://github.com/eastgerm/interview
