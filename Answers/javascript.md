@@ -145,11 +145,19 @@
 
 ### 자바스크립트의 원시 타입(Primitive Data Type)은 몇가지이며, 전부 말해달라
 
-### Number, String, Boolean, Null, Undefined, (Symbol)
+-   Number, String, Boolean, Null, Undefined, (Symbol) 6가지.
 
-    자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가
+### 자바스크립트의 Number Type은 다른 언어들과 차이점이 무엇인가, 왜 하나만 존재하는가
+
+-   자바스크립트의 Number type은 언제나`double-precision 64-bit binary format IEEE 754`로 표시한다. 다른 언어들에서 찾아볼 수 있는 `double` type인 것이다.
 
 ### 실행 컨텍스트(Execution Context)에 대해 설명해달라
+
+-   https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0
+-   execution context는 자바스크립트 코드가 평가되고 실행되는 추상화된 개념이다. this value, objects, functions 등이 이걸 구성한다.
+-   두 가지가 있다. global execution context과 functional execution context.
+    -   global execution context
+        -   자바스크립트 엔진이 스크립트를 처음 만났을 때. 전역 객체를 만들고 그걸 this에 binding한다.
 
 ### [x] 자바스크립트의 호이스팅(Hoisting)은 어떻게 이루어져 있는가
 
@@ -161,6 +169,12 @@
 
 ### 자바스크립트에서 This는 몇가지로 추론 될수 있는가, 아는대로 말해달라
 
+1. 객체의 프로퍼티로 함수가 있을 때 그 객체에
+2. 그냥 함수에서 찍으면 global.
+3. new keyword로 생성자 함수를 통해 call될 때
+4. apply, call, bind 등을 통해.
+5. 화살표 함수에서는 enclosing execution context.
+
 ### [x] Call, Apply, Bind 함수에 대해 설명해달라
 
-    > call, apply, bind 함수는 함수의 prototype 내에 존재하는 method이다. call과 apply 함수는 함수를 바로 실행하는 반면, bind 함수는 새로운 함수를 return한다.
+-   call, apply, bind 함수는 함수의 prototype 내에 존재하는 method이다. call과 apply 함수는 함수를 바로 실행하는 반면, bind 함수는 새로운 함수를 return한다.
