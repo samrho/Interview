@@ -6,8 +6,6 @@ var obj = {
 const obj2 = { ...obj };
 obj2.a = 3;
 
-console.log(obj);
-
-const obj3 = Object.assign({}, obj);
-obj3.a = 3;
-console.log(obj);
+Object.getOwnPropertyNames(obj).forEach((key) => {
+	console.log(key, obj[key]);
+});

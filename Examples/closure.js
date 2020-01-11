@@ -1,5 +1,10 @@
-function ab() {
-	var a = 1;
-	console.log(a); // works
+function outer() {
+	let greeting = "hi, Im seungnam";
+	return function inner() {
+		console.log("i'm inside the inner function");
+		console.log(greeting);
+	};
 }
-console.log(a); // fail
+
+const closure = outer();
+closure();
