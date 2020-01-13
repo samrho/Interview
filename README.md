@@ -61,7 +61,7 @@
 
 -   [ ] 크롬 정도의 브라우저를 제외하곤 ES6 스펙에 대한 지원이 완벽하지 않다. 해결방법은 무엇인가
 -   [ ] Babel의 기능을 한 단어로 말해달라
--   [ ] ES6 에서 추가된 스펙에 대해 아는대로 다 말해달라(let, const, rest parameter, class, arrow function...)
+-   [x] ES6 에서 추가된 스펙에 대해 아는대로 다 말해달라(let, const, rest parameter, class, arrow function...)
 -   [ ] var 와 let, const의 가장 큰 차이점은 무엇인가 (function scope와 block scope의 개념에서)
 -   [ ] Class 는 무엇이고, Prototype, fucntion의 ES5 스펙만으로 Class를 구현할수 있는가
 -   [ ] es6 let const var 호이스팅 관점 설명
@@ -103,7 +103,7 @@
 -   [ ] 보안은 서버쪽에서 많이 신경쓰고 있지만, 프론트엔드 개발에서 보안관련 이슈는 어떠한 것들이 있는가
 -   [x] Wireshark 에 대해 알고 있는가
 -   [ ] HTTP 통신의 문제점에 대해서 아는대로 말해달라
--   [ ] CORS(Cross-Origin Resource Sharing)는 무엇인가 왜 이러한 방법이 정의 되었으며, 본인이 코드를 작성하면서 CORS와 관련하여서 경험하였던 이슈는 무엇인가
+-   [x] CORS(Cross-Origin Resource Sharing)는 무엇인가 왜 이러한 방법이 정의 되었으며, 본인이 코드를 작성하면서 CORS와 관련하여서 경험하였던 이슈는 무엇인가
 -   [ ] 간단한 데이터를 클라이언트로만 관리 할수 있는가, 이와 관련해서 브라우저 에서 어떠한 것들을 지원하고 있는가, 예를 들면 소셜 로그인같은 것들에 대한 브라우저 종료시 발생하는 문제에 대응 경험이 있는가
 
 ## OOP
@@ -125,8 +125,8 @@
 
 -   [ ] 비동기 프로그래밍(Asynchronous)
 -   [ ] AJAX란 무엇인가
--   [ ] Promise란 무엇이며 코드가 어떻게 구성되어있는가
--   [ ] Promise와 Callback의 차이점은 무엇이며 각각의 장단점에 대해 설명해달라
+-   [x] Promise란 무엇이며 코드가 어떻게 구성되어있는가
+-   [x] Promise와 Callback의 차이점은 무엇이며 각각의 장단점에 대해 설명해달라
 -   [ ] Async, Await가 무엇이며, 사용해본 경험이 있는가
 -   [ ] 비동기를 처리할 수 있는 4가지 방법에 대해 이야기해 보고 장단점, 특징을 논하라(callback, promise, async/await, generator function)
 -   [ ] 이미지 레이지로딩 어케 했나
