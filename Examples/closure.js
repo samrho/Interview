@@ -1,10 +1,18 @@
 function outer() {
-	let greeting = "hi, Im seungnam";
-	return function inner() {
-		console.log("i'm inside the inner function");
-		console.log(greeting);
+	let outer_value = "hello";
+	let another = "lel";
+	return {
+		getter: function() {
+			console.log(outer_value);
+			console.log(another);
+			return "end";
+		},
+		setter: function() {
+			outer_value = "anther hello";
+			another = "ddd";
+		},
 	};
 }
 
-const closure = outer();
-closure();
+const closure = outer().getter;
+console.log(closure());
