@@ -67,6 +67,26 @@
 
 ### NodeList 타입을, Array에 있는 reduce메서드를 사용하는 방법은?
 
+`[].slice` 이든지, `randomArr.slice`이든지 어쨌든 `Array.prototype.slice`를 참조하기 때문에(`===` 연산을 해보면 true라고 나온다. ) 이 method를 빌려 작업을 처리하려고 한다. slice를 비롯한 내장 array 메서드들은 this를 참조한다. 그렇기 때문에 method만 빌리고 method 내부에서 참조하는 object를 강제로 잡아 넣어 주면 우리가 원하는 작업을 성취할 수 있다. 바로 아래와 같이 말이다.
+
+```js
+const nodeList = document.querySelectorAll(".random-class");
+const converted = [].slice.call(nodeList);
+// or
+const converted2 = Array.prototype.slice.apply(nodeList);
+```
+
+좀 더 모던한 방식으로 구현하려고 하면 아래와 같이 ES6 `from` 메서드를 호출해 주면 된다.  
+주의해야 할 점은, 유사배열이 되기 위한 조건은 객체의 key는 `0`부터 시작하는 숫자여야 하고, 이 키-값 pair의 개수가 `length`라는 key의 값으로 들어와 있어야 한다는 것이다.
+
+```js
+const converted3 = Array.from(nodeList);
+```
+
+`slice()` 함수는 내부적으로 `this` value를 사용해 동작한다. 그런데 일반적으로 `slice()`함수를 사용하듯이 `nodeList.slice()`를 해주면 object의 property가 함수인(method) 케이스이기 때문에
+call이나 apply나, 함수를 바로 실행해버리는 것은 동일한데 argument로 하나 하나를 받느냐 array로 받느냐에서 차이를 보이기 때문에  
+첫 번째 argument로 오는 this로 binding될 object가 오는 것은 동일하다. 그리하여 apply로 해도 되고 call로 해도 무방하다.
+
 ### undefined와 null의 차이점을 설명하세요.
 
 -   undefined는 변수가 선언되기는 했으나 값이 할당되지 않았을 때. 즉 값이 없다는 말이다.
@@ -76,15 +96,21 @@
 
 ### 아래처럼 동작하는 flatten함수를 reduce를 활용해서 만들어보세요.
 
-    ```js
-    const arr = [
-    	[1, 2],
-    	[3, 4],
-    	[5, 6],
-    ];
-    const flattenedArray = flatten(arr);
-    console.log(flattenedArray); //[1, 2, 3, 4, 5, 6];
-    ```
+```js
+const arr = [
+	[1, 2],
+	[3, 4],
+	[5, 6],
+];
+const flattenedArray = flatten(arr);
+console.log(flattenedArray); //[1, 2, 3, 4, 5, 6];
+```
+
+```js
+const reducer = (acc, item) =>
+	acc.concat(Array.isArray(item) ? flat(item) : item);
+const flat = (arr) => arr.reduce(reducer, []);
+```
 
 ### 객체를 복사해서 새로운 객체를 만들고 싶습니다. 코드를 구현해보세요. (객체의 깊이는 1단계만 있다고 가정)
 
@@ -100,6 +126,22 @@
         -   `JSON.parse(JSON.stringify(obj))`를 통해 성취할 수 있다. 내부적으로 재귀적으로 복사한다.
 
 ### Array.from 이 모든 브라우저에서 동작하도록 polyfill코드를 만들어보세요.
+
+위에서 설명했던 것처럼, 아래 코드에 사용된 `Array.from` 메서드는 ES6에 추가된 것이기 때문에, 모든 브라우저에서 사용할 수가 없다.
+
+```js
+const elms = document.body.children;
+const converted = Array.from(elms);
+```
+
+그리하여 폴리필 코드를 작성해 본다면 아래와 같이 할 수 있을 것이다.
+
+```js
+const elms = document.body.children;
+const converted = [].slice.call(elms);
+```
+
+설명은 위를 참고하도록 한다.
 
 ### prototype 의 동작방식에 대해서 설명해보세요.
 
@@ -141,7 +183,7 @@
 
 ### CommonJS 스펙에 대해 설명해보세요.
 
-### 클로저로 동작되는 상황을 예시코드로 보여주세요.
+### 로저로 동작되는 상황을 예시코드로 보여주세요.
 
 ### 자바스크립트의 원시 타입(Primitive Data Type)은 몇가지이며, 전부 말해달라
 

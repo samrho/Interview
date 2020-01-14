@@ -2,15 +2,15 @@
 
 ### RESTful API 가 무엇인가, 아는대로 다 말해달라
 
-    -   로이 필딩이라는 박사 논문에서 제시된 개념. 6가지 특징이 있다.
-        1. Stateless
-        2. code on-demand
-        3. Hierarchy
-        4. Uniform Resource
-        5. Caching
-        6. Server-client architecture
-    -   두 개를 기억하면 된다. 자원과 그 자원에 대한 행위
-    -   리소스에 대한 응답 코드
+-   로이 필딩이라는 박사 논문에서 제시된 개념. 6가지 특징이 있다.
+    1. Stateless
+    2. code on-demand
+    3. Hierarchy
+    4. Uniform Resource
+    5. Caching
+    6. Server-client architecture
+-   두 개를 기억하면 된다. 자원과 그 자원에 대한 행위
+-   리소스에 대한 응답 코드
 
 ### 보안은 서버쪽에서 많이 신경쓰고 있지만, 프론트엔드 개발에서 보안관련 이슈는 어떠한 것들이 있는가
 
