@@ -14,3 +14,18 @@ Person.prototype.sayHello = function() {
 sam.sayHello();
 console.log(sam.__proto__);
 jonae.sayHello();
+
+var GrandParent = function() {};
+var Parent = function() {};
+
+Parent.prototype = new GrandParent();
+Parent.prototype.constructor = Parent;
+
+const parentInstance = new Parent();
+var isThatTrue = Parent.prototype.isPrototypeOf(parentInstance);
+console.log(isThatTrue);
+
+const what = Object.getPrototypeOf(parentInstance);
+console.log(what);
+Object.create()
+
