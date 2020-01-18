@@ -1,18 +1,12 @@
-function outer() {
-	let outer_value = "hello";
-	let another = "lel";
-	return {
-		getter: function() {
-			console.log(outer_value);
-			console.log(another);
-			return "end";
-		},
-		setter: function() {
-			outer_value = "anther hello";
-			another = "ddd";
-		},
+function counter() {
+	var val = 0;
+	return function add() {
+		val++;
+		console.log(val);
 	};
 }
 
-const closure = outer().getter;
-console.log(closure());
+const b = counter();
+const c = counter();
+b();
+b();
