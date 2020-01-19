@@ -9,6 +9,7 @@
 
 ## CSS
 
+-   [ ] 이벤트 버블링과 캡처링의 차이를 말해 보아라
 -   [ ] CSS이벤트 제어 방법(event delegation, event bubbling 등)
 
 ## Javascript
