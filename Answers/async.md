@@ -14,4 +14,23 @@
 
 ### Async, Await가 무엇이며, 사용해본 경험이 있는가
 
+> 기존의 비동기 로직 처리 방법은 가독성을 해친다는 비판의 소리를 피해가기 힘들었다. (Callback, Promise 등). 그런데 ES8(2017년)에서 도입된 async / await 문법은 말 그대로 **비동기 코드를 동기 코드처럼 작성할 수 있게** 해 준다. 아래 코드를 보면 이해가 될 것이다.
+> 여기서 주의해야 할 점은, `await` 뒤에 따라올 구문은 Promise 객체를 return하는 것이어야만 정상적으로 작동한다.
+
+```js
+function fetchItems() {
+	return new Promise(function(resolve, reject) {
+		var items = [1, 2, 3];
+		resolve(items);
+	});
+}
+
+async function logItems() {
+	var resultItems = await fetchItems();
+	console.log(resultItems); // [1,2,3]
+}
+```
+
+> 출처: 캡틴판교님의 블로그
+
 ### 비동기를 처리할 수 있는 4가지 방법에 대해 이야기해 보고 장단점, 특징을 논하라(callback, promise, async/await, generator function)
