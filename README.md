@@ -84,7 +84,7 @@
 
 ## Node
 
--   [ ] node의 middleware의 동작방식을 설명해보세요.
+-   [x] node의 middleware의 동작방식을 설명해보세요.
 
 ## Web
 
@@ -171,3 +171,6 @@ https://velog.io/@honeysuckle/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%
 https://github.com/JaeYeopHan/Interview_Question_for_Beginner  
 https://lucas.codesquad.kr/  
 https://github.com/eastgerm/interview
+프론트엔드 면접 문제 은행: https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean
+프론트엔드 체크리스트: https://github.com/kesuskim/Front-End-Checklist
+자바스크립트 인터뷰 가이드(진짜 좋음): https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
