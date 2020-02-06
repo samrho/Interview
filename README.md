@@ -6,6 +6,7 @@
 
 -   [x] HTML vs XML ?
 -   [x] XML vs JSON ?
+-   [x] script tag는 왜 마지막에 넣는가?
 
 ## CSS
 
