@@ -7,6 +7,7 @@
 
 ### Babel의 기능을 한 단어로 말해달라
 
+transpiling.  
 ES6+ 의 코드를 ES5을 포함하여 그 이전의 버전으로 돌리는 것
 
 ### ES6 에서 추가된 스펙에 대해 아는대로 다 말해달라(let, const, rest parameter, class, arrow function...)
