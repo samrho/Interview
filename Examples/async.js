@@ -1,16 +1,14 @@
-console.log("script start");
+const fetch = require("node-fetch");
+var data;
+const URL = "https://api.github.com/users/samrho";
 
-setTimeout(function() {
-	console.log("setTimeout");
-}, 0);
+const initialize = async (URL) => {
+	const result = await fetch(URL);
+	return result;
+};
 
-Promise.resolve()
-	.then(function() {
-		console.log("promise1");
-	})
-	.then(function() {
-		console.log("promise2");
-	});
-
-requestAnimationFrame(() => console.log("hello"));
-console.log("script end");
+(async () => {
+	const res = await initialize(URL);
+	data = res;
+	console.log(data);
+})();

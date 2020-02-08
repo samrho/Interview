@@ -1,0 +1,11 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/samrho/interview.git",
+  "author": "Sam Rho <seungnam2@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
