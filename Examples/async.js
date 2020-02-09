@@ -1,5 +1,4 @@
 const fetch = require("node-fetch");
-var data;
 const URL = "https://api.github.com/users/samrho";
 
 const initialize = async (URL) => {
@@ -10,5 +9,4 @@ const initialize = async (URL) => {
 (async () => {
 	const res = await initialize(URL);
 	data = res;
-	console.log(data);
 })();
