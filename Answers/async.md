@@ -34,3 +34,15 @@ async function logItems() {
 > 출처: 캡틴판교님의 블로그
 
 ### 비동기를 처리할 수 있는 4가지 방법에 대해 이야기해 보고 장단점, 특징을 논하라(callback, promise, async/await, generator function)
+
+### f1, f2, f3, f4가 모두 1초씩 걸린다고 가정할때, main이 어떻게 더 빨리 실행되도록 할수 있나요? (await을 계속해서 사용하면서)
+
+```js
+async function main() {
+	const a = await f1();
+	const b = await f2();
+	const c = await f3(b);
+	const d = await f4(a, c);
+	return d;
+}
+```

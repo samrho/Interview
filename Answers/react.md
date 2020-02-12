@@ -13,3 +13,7 @@
 ### SSR은 무엇인가요? 어떻게 구현하죠?
 
 > 최초 한 번 전체 페이지를 로딩한 뒤 데이터만 변경한 후 사용할 수 있는 SPA가 클라이언트 사이드 렌더링(Client Side Rendering)과 달리 서버 사이드 렌더링(Server Side Rendering, SSR)은 서버에서 이른바 `완성된` HTML 파일을 브라우저에게 주어 브라우저가 아무 가공 없이 화면에 그릴 수 있도록 하는 렌더링 방법이다. 구현은 간단하게 할 수 있다. 서버에서 모든 처리를 완료한 후에 HTML file을 브라우저에게 건네기만 하면 되는 것이다.
+
+### class component의 life cycle에 대해 설명해 보세요
+
+### function component의 life cycle에 대해 설명해 보세요
